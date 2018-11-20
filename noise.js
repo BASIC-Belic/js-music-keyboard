@@ -3,7 +3,10 @@ const clickPlay = () => {
 
     const clickNote = $(this).html();
     // alert(`${clickNote}Audio`);
-    document.getElementById(`${clickNote}Audio`).play();
+
+    const note = document.getElementById(`${clickNote}Audio`).play();
+    note.load();
+    note.play();
 
     // return `${clickNote}Audio` and call this in $(document).ready
   });
@@ -19,8 +22,10 @@ const typePlay = () => {
     if(!notes.includes(eventNote)) {
       alert(`This note: ${eventNote} is not valid.`)
     }
-    
-    document.getElementById(`${eventNote}Audio`).play();
+
+    const note = document.getElementById(`${eventNote}Audio`);
+    note.load();
+    note.play();
     // alert(`${eventNote}Audio`);
     // return `${eventNote}Audio` and call this in $(document).ready
   });
