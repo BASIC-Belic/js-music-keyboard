@@ -1,10 +1,11 @@
 const clickPlay = () => {
   $('.instrument').on( 'click', 'button', function() {
 
-    const clickNote = $(this).html();
-    // alert(`${clickNote}Audio`);
 
-    const note = document.getElementById(`${clickNote}Audio`).play();
+    // alert(`${clickNote}Audio`);
+    const clickNote = $(this).html();
+    const note = document.getElementById(`${clickNote}Audio`);
+    // const note = (`#${$(this).html()}Audio`).get[0];
     note.load();
     note.play();
 
